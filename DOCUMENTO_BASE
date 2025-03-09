@@ -1,0 +1,139 @@
+\documentclass[12pt,letterpaper,oneside]{book}
+\usepackage[utf8]{inputenc}%Codificación de entrada del formato de texto. a standart utf8
+\usepackage{ucs} %Codificación de entrada del formato de texto, apar UNIX y Linux antiguo.
+\usepackage[spanish]{babel} %Normas tipográficas y opciones del espannol
+\usepackage{amsmath}%Simbolos matemáticos 
+\usepackage{amsfonts}
+\usepackage{amssymb}%Simbolos
+\usepackage{amsbsy} %Simbolos
+\usepackage{makeidx}%Construccion del indice
+\usepackage{graphicx}%Proporciona todos los comandos necesarios para insertar imágenes y gráficos.
+\usepackage[left=3.00cm, right=2.00cm, top=2.50cm, bottom=2.00cm]{geometry}
+\usepackage{cancel} % para tachar
+
+%###########OPCIONES DE FUENTES############
+%\usepackage[T1]{fontenc} %Opción para crear letras capitales y codificacion de salidas de los tipos de fuentes o tipografias. Por defecto coloca la fuente computer modern.
+\usepackage{lmodern} %Version optimizada de la fuente computer modern original de latex.
+%\usepackage{kpfonts}
+%\usepackage{fourier}
+%\usepackage{pslatex} %Fuente por defecto tipo "Times" (Con serifas)
+%\usepackage{mathptmx} %Fuente por defecto tipo "Times" (Con serifas)
+%\usepackage{mathpazo} %Fuente por defecto para "Palatino" (Con serifas)
+%\usepackage{bookman} %Fuente por defecto "Bookman" (Con serifas)
+%usepackage{newcent} %Fuente por defecto para "New Century Schoolbook" (Con serifas)
+\usepackage{anyfontsize} %Controlar el tamaño de la fuente
+\usepackage{pifont}%Colocar fuentes especiales.
+%\usepackage{literat} %Activacion de letras tipograficas Literaturnaya serif
+
+%#####OPCIONES DE PAGINAS ################
+\usepackage{parskip} %Eliminar la sangria en los parrafos
+\usepackage{lscape} % Coloca elementos horizontales sin cambiar el sentido de la pagina
+\usepackage{pdflscape} % Coloca la pagina horizontal, se tiene que usar acompañado de "lscape" para rotar los elementos.
+\usepackage{csvsimple}
+\usepackage{soul}
+\usepackage[nopar]{lipsum}
+
+\usepackage{epsfig}
+
+%\usepackage{draftwatermark} %Colocar marca de agua con la palabra cruzada borrador
+%\SetWatermarkText{BORRADOR}
+%\SetWatermarkFontSize{4.5cm}
+%\SetWatermarkAngle{55}
+\usepackage{titlesec} %Opciones para modificar el título de los capítulos y secciones.
+%\def\chaptername{}
+\addto{\captionsspanish}{\def\chaptername{}} %Evitar que salga la palabra capítulo en las cabeceras de capítulo con el paquete babel espannol
+\addcontentsline{toc}{chapter}{}
+%\def\chaptername{} %Evitar que salga la palabra capítulo en las cabeceras de capítulo
+%Estilo de página fancy
+\usepackage{fancyhdr} %Modificar los estilos de página
+\usepackage{fancybox}
+\usepackage{fancyvrb} %Opciones de fancy y verbatim
+\fancyhf{} % Borra todos los ajustes tanto encabezado como pie de paginas
+
+%fancy, emcabezado de página
+%\fancyhead{} % Borra todos los ajustes de encabezado de paginas 
+%\lhead{} %Encabezado de la Izquierda
+%\chead{} %Encabezado del centro
+%\rhead{} %Encabezado de la derecha
+%\fancyhead[LE,RO]{\thepage} 
+%\fancyhead[LO]{\rightmark} 
+%\fancyhead[RE]{\leftmark} 
+\renewcommand{\headrulewidth}{0.0pt} %Definir Grosor de línea divisoria de encabezado, Valor 0 desaparece
+
+%fancy, Pie de página
+%\fancyfoot{}  % Borra todos los ajustes de pie de paginas
+%\lfoot{} %Pie de página izquierda
+%\cfoot{} %Pie de pagina del centro
+%\rfoot{\thepage} %Pie de pagina de derecha
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{}
+%\renewcommand{\footrulewidth}{0.4pt} %Definir Grosor de línea divisoria de pie de página, Valor 0 desaparece
+
+%#############OPCIONES DE CUADROS#############
+\usepackage{multirow} %Unir celdas de la misma columna o juntar filas
+\usepackage{multicol} %Unir Columnas en las tablas.
+\usepackage{colortbl} %Colorear tablas
+\usepackage{tabulary}
+\usepackage{supertabular}
+\usepackage{dcolumn}
+\usepackage{array} %Centrar verticalmente los elementos de una casilla en las tablas
+\usepackage{longtable} %Diseñar tablas que se extienden más allá de una página
+\usepackage{hhline}
+\usepackage{rotating} %para rotar la posición de los textos en las tablas.
+%\usepackage[x11names,table]{xcolor} %poner color en las filas o las columnas de una tabla
+%\usepackage{tabularx} %Opciones para tablas
+
+%#########OPCIONES DE IMAGENES, GRAFICOS Y CUADROS########
+\usepackage{caption}%Etiquetado de imágenes y cuadros
+\usepackage{subcaption}
+\usepackage{capt-of} %Permite añadir un caption en cualquier lugar del texto sin estar dentro de un  entorno cuadro o figura, escribiendo \cationof{figura}{texto del pie de figura}
+\usepackage{captdef} %Define nombre de la figura \figcaption{texto de pie de figura}
+\usepackage{float} %Coloca\chapter*{Marco teórico}
+%\usepackage{epsfig}
+\usepackage{pstricks}%Graficos matematicos de alta calidad, utilizando tecnicas de graficos vectorizados
+\usepackage{pst-node}
+\usepackage{pst-grad}% For gradients
+\usepackage{pst-plot} % For axes
+%\usepackage{texcomp}
+
+%#REFERENCIAS BIBLIOGRAFICAS ###########################
+%\usepackage{chicago}
+%\usepackage[flexbib]{chicago}
+%\usepackage[flexbib]{apalike}
+%\usepackage{apalike}
+\usepackage[noabstract,datebegin,round]{flexbib}
+%Spatial  information  technology  (SIT)
+\author{David A. Castillo Sevilla}
+\begin{document}
+	\pagestyle{fancy} 
+	\bibliographystyle{flexbib}
+	\renewcommand{\bibname}{Referencias Bibliográficas} %Cambia el título de la refrencia en un documento tipo libro
+	%\renewcommand\chaptername{}
+	%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\thechapter.\ #1}{}}
+	%\renewcommand {\chaptermark}[1]{\markboth{#1}{}} %Permite quitar del encabezado la palabra "Chapter", y recuperar el espacio corespondiente.
+	%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}} 
+	%\frontmatter
+	%\pagenumbering{arabic} % para comenzar la numeracion de paginas en numeros arabigos
+	%\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+	\input{Titulo}
+	%\mainmatter
+	%\pagenumbering{arabic} % para comenzar la numeracion de paginas en numeros arabigos
+	\tableofcontents
+	\listoftables
+	\listoffigures
+	\include{Resumen}
+	%\include{Introduccion}
+	%\include{Justificacion}
+	%\include{Antecedentes_marco_teorico}
+	%\include{Objetivos}
+	%\include{Materiales_metodo}
+	%\include{Cronogramadetrabajo}
+	%\include{Factibilidad}
+	%\include{Resultados}
+	%\include{Comentarios_finales}
+	%\include{Conclusiones}
+	%\include{Marco_teorico}
+	%\include{CARACTERISTICAS}
+	\backmatter
+	\bibliography{libros}
+\end{document}
